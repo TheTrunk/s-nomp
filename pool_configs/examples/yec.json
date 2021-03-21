@@ -1,6 +1,6 @@
 {
     "enabled": false,
-    "coin": "zec.json",
+    "coin": "yec.json",
 
     "address": "",
     "_comment_address": "a transparent address to send coinbase rewards to and to transfer to zAddress.",
@@ -18,7 +18,7 @@
     "_comment_walletInterval": "Used to cache coin stats",
 
     "rewardRecipients": {
-        "": 0.2
+        "": 1.0
     },
 
     "tlsOptions": {
@@ -34,11 +34,11 @@
         "paymentMode": "prop",
         "_comment_paymentMode": "prop, pplnt",
         "paymentInterval": 120,
-        "minimumPayment": 0.05,
+        "minimumPayment": 0.1,
         "maxBlocksPerPayment": 3,
         "daemon": {
-            "host": "127.0.0.1",
-            "port": 8232,
+            "host": "",
+            "port": 8832 ,
             "user": "rpcuser",
             "password": "rpcpassword"
         }
@@ -46,8 +46,8 @@
 
     "ports": {
         "1234": {
-            "diff": 0.5,
             "tls": false,
+            "diff": 0.05,
             "varDiff": {
                 "minDiff": 0.04,
                 "maxDiff": 36,
@@ -63,8 +63,8 @@
 
     "daemons": [
         {
-            "host": "127.0.0.1",
-            "port": 8232,
+            "host": "",
+            "port": 8832,
             "user": "rpcuser",
             "password": "rpcpassword"
         }
@@ -73,7 +73,7 @@
     "p2p": {
         "enabled": false,
         "host": "127.0.0.1",
-        "port": 8233,
+        "port": 8833,
         "disableTransactions": true
     },
 
@@ -83,7 +83,7 @@
         "port": 3306,
         "user": "me",
         "password": "mypass",
-        "database": "zec",
+        "database": "xsg_testnet",
         "checkPassword": true,
         "autoCreateWorker": false
     }

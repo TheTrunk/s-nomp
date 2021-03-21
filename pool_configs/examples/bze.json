@@ -1,6 +1,6 @@
 {
     "enabled": false,
-    "coin": "zec.json",
+    "coin": "bze.json",
 
     "address": "",
     "_comment_address": "a transparent address to send coinbase rewards to and to transfer to zAddress.",
@@ -30,7 +30,7 @@
 
     "paymentProcessing": {
         "enabled": true,
-        "minConf": 10,
+        "minConf": 6,
         "paymentMode": "prop",
         "_comment_paymentMode": "prop, pplnt",
         "paymentInterval": 120,
@@ -38,7 +38,7 @@
         "maxBlocksPerPayment": 3,
         "daemon": {
             "host": "127.0.0.1",
-            "port": 8232,
+            "port": 1980,
             "user": "rpcuser",
             "password": "rpcpassword"
         }
@@ -46,13 +46,46 @@
 
     "ports": {
         "1234": {
+            "tls":false,
             "diff": 0.5,
-            "tls": false,
             "varDiff": {
                 "minDiff": 0.04,
-                "maxDiff": 36,
+                "maxDiff": 16,
                 "targetTime": 15,
-                "retargetTime": 60,
+                "retargetTime": 80,
+                "variancePercent": 30
+            }
+        },
+        "1234": {
+            "tls":false,
+            "diff": 16,
+            "varDiff": {
+                "minDiff": 6,
+                "maxDiff": 20,
+                "targetTime": 15,
+                "retargetTime": 80,
+                "variancePercent": 30
+            }
+        },
+        "1234": {
+            "tls":false,
+            "diff": 0.25,
+            "varDiff": {
+                "minDiff": 0.1,
+                "maxDiff": 10,
+                "targetTime": 15,
+                "retargetTime": 80,
+                "variancePercent": 30
+            }
+        },
+        "1234": {
+            "tls":false,
+            "diff": 4,
+            "varDiff": {
+                "minDiff": 0.5,
+                "maxDiff": 20,
+                "targetTime": 15,
+                "retargetTime": 80,
                 "variancePercent": 30
             }
         }
@@ -64,7 +97,7 @@
     "daemons": [
         {
             "host": "127.0.0.1",
-            "port": 8232,
+            "port": 1980,
             "user": "rpcuser",
             "password": "rpcpassword"
         }
@@ -73,7 +106,7 @@
     "p2p": {
         "enabled": false,
         "host": "127.0.0.1",
-        "port": 8233,
+        "port": 1990,
         "disableTransactions": true
     },
 
@@ -83,7 +116,7 @@
         "port": 3306,
         "user": "me",
         "password": "mypass",
-        "database": "zec",
+        "database": "bzc",
         "checkPassword": true,
         "autoCreateWorker": false
     }
